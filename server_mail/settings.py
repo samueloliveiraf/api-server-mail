@@ -31,7 +31,9 @@ DEFAULT_APPS = [
 ]
 
 THIRD_APPS = [
-    'rest_framework'
+    'rest_framework',
+    'django_celery_beat',
+    'django_celery_results'
 ]
 
 PROJECT_APPS = [
@@ -112,6 +114,23 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
     ]
 }
+
+# Config Celery
+CELERY_BROKER_URL = config('CELERY_BROKER_URL')
+CELERY_RESULT_BACKEND = config('CELERY_RESULT_BACKEND')
+REDIS_URL = config('REDIS_URL')
+ACCEPT_CONTENT = ['application/json', ]
+TASK_SERIALIZER = 'json'
+RESULT_SERIALIZER = 'json'
+CACHE_BACKEND = 'default'
+TASK_IGNORE_RESULT = True
+
+# Celery Routes
+CELERY_TASK_ROUTES = (
+    [
+        ("apps.campaign.tasks.task_send_email", {"queue": "queue_send_email"}),
+    ],
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/

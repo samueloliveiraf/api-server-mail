@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .tasks import task_send_email
 from .models import Campaign
 
 import requests
@@ -17,21 +18,11 @@ def lists_campaign(request):
 
 
 def send_emails_campaign(request, id_campaign):
-    campaigns = Campaign.objects.get(
+    campaign = Campaign.objects.get(
         user=request.user,
         id=id_campaign
     )
 
-    try:
-        send_email(
-            campaigns.subject,
-            campaigns.image,
-            campaigns.email_from,
-            campaigns.emails_destiny,
-            campaigns.color,
-            campaigns.body
-        )
-        return render(request, 'campaign/list_campaigns.html')
-    except Exception as e:
-        print(f'Error ao enviar email {e}')
+    task_send_email.delay(campaign.id)
 
+    return render(request, 'campaign/list_campaigns.html')
