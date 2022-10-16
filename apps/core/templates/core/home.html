@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock %} {% block main %}
+    <div class="container">
+        <h2>HOME</h2>
+        <a href="{% url 'lists_campaigns' %}">
+            <button class="btn waves-effect indigo darken-4" type="button" name="action">
+                Listar Campanhas
+                <i class="material-icons right">send</i>
+            </button>
+        </a>
+    </div>
+{% endblock %}
