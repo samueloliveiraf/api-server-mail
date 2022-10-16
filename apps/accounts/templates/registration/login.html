@@ -1,21 +1,23 @@
-
 {% extends 'base.html' %} {% block title %} Login {% endblock %} {% block main %}
     {% load static %}
 
     {% block link %}
-        <link href="{% static 'css/login.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+        <link href="{% static 'css/login.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
     {% endblock %}
 
     <div class="container">
-        <div class="card">
-            <form class="col s12" method="POST"> {% csrf_token %} {{ form }}
+        <div class="inner-div">
+            <div class="card">
+                <form class="col s12" method="POST"> {% csrf_token %} {{ form }}
 
-                <button style="margin-top: 12px;" class="btn waves-effect indigo darken-4" type="submit" name="action">
-                    Entrar
-                    <i class="material-icons right">send</i>
-                </button>
+                    <button style="margin-top: 12px;" class="btn waves-effect purple darken-4" type="submit"
+                            name="action">
+                        Entrar
+                        <i class="material-icons right">send</i>
+                    </button>
 
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 {% endblock %}

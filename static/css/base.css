@@ -24,11 +24,17 @@ body {
 }
 
 label {
-    color: #0D47A1;
+    color: #4a148c;
     font-size: 1rem;
 }
 
 input:focus {
     border-bottom: 1px solid rgb(67, 116, 161) !important;
     box-shadow: 0 1px 0 0 rgb(67, 116, 161) !important
+}
+
+.inner-div{
+    width: inherit;
+    position: absolute;
+    top: 5%;
 }

@@ -4,7 +4,7 @@ from django.contrib import admin
 
 from apps.apis import urls as urls_api
 from apps.campaign import urls as urls_campaigns
-from apps.core.views import home
+from apps.core.views import home, index
 
 
 urlpatterns = [
@@ -14,5 +14,7 @@ urlpatterns = [
     path('accounts/login/', auth_views.LoginView.as_view(), name='login'),
     path('accounts/logout/', auth_views.LogoutView.as_view(), name='logout'),
 
-    path('', home, name='home')
+
+    path('home/', home, name='home'),
+    path('', index, name='index')
 ]
