@@ -3,42 +3,28 @@ from apps.accounts.models import User
 
 
 class Campaign(models.Model):
-    COLOR_CHOICES = [
-        ('vermelho', 'vermelho'),
-        ('azul', 'azul'),
-        ('verde', 'verde')
-    ]
     subject = models.CharField(
         max_length=5000,
-        null=True,
-        blank=True,
         verbose_name='Cabeçalho'
     )
     image = models.CharField(
         max_length=5000,
-        null=True,
-        blank=True,
         verbose_name='Link da imagem'
     )
     email_from = models.CharField(
         max_length=5000,
-        null=True,
-        blank=True,
         verbose_name='Email de envio'
     )
     color = models.CharField(
         max_length=5000,
-        null=True,
-        blank=True,
-        choices=COLOR_CHOICES,
-        verbose_name='Cor'
+        verbose_name='Informe a cor. '
+        'A cor só podem ser = azul ou verde ou vermelho, '
+        'informe em texto e tudo minusculo sem espaço',
     )
     emails_destiny = models.TextField(
         verbose_name='Informe os emails de destino separado por vírgula'
     )
     body = models.TextField(
-        null=True,
-        blank=True,
         verbose_name='Mensagem'
     )
     user = models.ForeignKey(User, on_delete=models.PROTECT)

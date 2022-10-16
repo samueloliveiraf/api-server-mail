@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% block title %} Criar Campanha {% endblock %} {% block main %}
+    {% include 'nav.html' %}
+    <div class="container">
+    <div class="row">
+        <form style="padding: 2rem" class="card col s12 card-form" method="POST"> {% csrf_token %} {{ form }}
+
+            <button class="btn waves-effect indigo darken-4 mt-btn" type="submit" name="action">
+                Salvar
+                <i style="color: white;" class="material-icons right">send</i>
+            </button>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="{% static 'css/materialize.min.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="{% static 'css/base.css' %}" type="text/css" rel="stylesheet" media="screen,projection" />
+    {% block link %} {% endblock %}
     <title>{% block title %} {% endblock %}</title>
 </head>
+
 <body>
     {% block main %}
     {% endblock %}
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="{% static 'js/materialize.min.js' %}"></script>
+    <script src="{% static 'js/drown.js' %}"></script>
 </body>
+
 </html>
