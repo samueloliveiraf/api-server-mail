@@ -2,7 +2,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #f2f2f2;
+    background: url('https://user-images.githubusercontent.com/44476076/196070719-48006e8f-a63f-4d13-81c3-79fa3763742b.png');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .page-footer {
@@ -13,10 +15,11 @@ body {
 
 .mt-btn {
     margin-top: 1rem;
+    margin-left: 0.5rem;
 }
 
 .card-home {
-    margin-top: 5rem;
+    margin-top: 10rem;
 }
 
 .card-form {
@@ -24,7 +27,7 @@ body {
 }
 
 label {
-    color: #4a148c;
+    color: white;
     font-size: 1rem;
 }
 
@@ -37,4 +40,8 @@ input:focus {
     width: inherit;
     position: absolute;
     top: 5%;
+}
+
+.card-list {
+    margin-top: 2.8rem;
 }

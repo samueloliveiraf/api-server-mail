@@ -48,19 +48,15 @@
 </head>
 <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-    <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+    <header class="mdl-layout__header mdl-layout__header--scroll">
+        <div style="background: #ee6e73" class="mdl-layout--large-screen-only mdl-layout__header-row">
             <h3>SendMail</h3>
         </div>
-        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
-        </div>
-        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+        <div style="background: #f86268" class="mdl-layout__tab-bar mdl-js-ripple-effect">
             <a href="#overview" class="mdl-layout__tab is-active">Overview</a>
             <a href="#features" class="mdl-layout__tab">Features</a>
             <a href="{% url 'login' %}">
-                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" id="add">
+                 <button style="background: #6425d5; color: white; margin-top: -22px" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" id="add">
                     Entrar na conta
                  </button>
             </a>
@@ -259,7 +255,7 @@
                 </div>
             </section>
         </div>
-        <footer class="mdl-mega-footer">
+        <footer class="mdl-mega-footer mdl-base">
             <div class="mdl-mega-footer--middle-section">
                 <div class="mdl-mega-footer--drop-down-section">
                     <input class="mdl-mega-footer--heading-checkbox" type="checkbox" checked>

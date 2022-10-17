@@ -1,14 +1,39 @@
+body {
+    background: url('https://user-images.githubusercontent.com/44476076/196070719-48006e8f-a63f-4d13-81c3-79fa3763742b.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 .card {
     padding: 2.5rem;
+    background: rgb(246, 144, 112);
+    top: 10rem;
+    width: 27rem;
+}
+
+.btn {
+    background: #50bfd8;
+}
+
+.btn:hover {
+    background: #43c6ec;
 }
 
 label {
-    color: #4a148c !important;
+    color: white;
     font-size: 1rem;
 }
 
 input:focus {
-    border-bottom: 1px solid rgb(67, 116, 161) !important;
-    box-shadow: 0 1px 0 0 rgb(67, 116, 161) !important
+    border-bottom: white !important;
+    box-shadow: white !important;
+}
+
+input {
+    background: #c0ebff !important;
+    border-radius: 0.7rem;
+}
+
+li {
+    color: white;
 }
